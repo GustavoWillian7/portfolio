@@ -1,0 +1,130 @@
+.hero-container {
+  display: flex;
+  width: 100%;
+  min-height: 600px;
+  padding: 40px 0;
+}
+
+.left-section, .right-section {
+  flex: 1;
+  padding: 20px;
+}
+
+.left-section {
+  margin-right: 250px;
+  margin-top: 20px;
+}
+
+.right-section {
+  margin-right: 250px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.profile-picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  margin-top: 60px;
+}
+
+.profile-picture img {
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+}
+
+.greeting {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.greeting p {
+  font-size: 35px;
+  font-family: 'Source Code Pro', monospace;
+}
+
+.greeting h1 {
+  font-size: 40px;
+  font-family: 'Source Code Pro', monospace;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  border-right: 2px solid white;
+  animation: typing 2s steps(20, end), blink-caret 0.75s step-end infinite;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 65%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: white; }
+}
+
+#sobre {
+  padding-top: 80px;
+  margin-top: -80px;
+}
+
+#sobre p {
+  text-align: justify;
+}
+
+.right-section h2 {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 50px;
+  margin-top: -20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.right-section p {
+  font-size: 17.5px;
+  line-height: 3.2;
+  font-family: 'Source Code Pro', monospace;
+}
+
+.contact-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #25d366;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 120px;
+  margin: 0 auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.1s, box-shadow 0.1s, background-color 0.3s;
+  text-decoration: none;
+  color: white;
+  font-family: 'Source Code Pro', monospace;
+}
+
+.contact-button img {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+
+.contact-button span {
+  font-size: 16px;
+}
+
+.contact-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.contact-button:hover {
+  background-color: #1e8e3e;
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
