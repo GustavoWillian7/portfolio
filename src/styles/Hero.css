@@ -2,25 +2,30 @@
   display: flex;
   width: 100%;
   min-height: 600px;
-  padding: 0px 0;
+  padding: 0;
+
+  justify-content: center; /* Centraliza as seções no container */
+  gap: 300px; /* Espaçamento vazio entre left e right */
 }
 
 .left-section,
 .right-section {
-  flex: 1;
+  flex: 0 0 500px; /* largura fixa (ajuste a gosto) */
   padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centraliza conteúdo horizontalmente */
 }
 
 .left-section {
-  margin-right: 250px;
-  margin-top: 20px;
+  margin: 0; /* remove margens fixas */
+  margin-top: 20px; /* pode manter */
 }
 
 .right-section {
-  margin-right: 250px;
-  margin-top: 40px;
-  display: flex;
-  flex-direction: column;
+  margin: 0; /* remove margens fixas */
+  margin-top: 40px; /* pode manter */
   gap: 30px;
 }
 
