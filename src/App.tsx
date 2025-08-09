@@ -1,9 +1,8 @@
-import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import TechStack from './components/TechStack';
-import Projects from './components/Projects';
-import './styles/App.css';
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import TechStack from "./components/TechStack";
+import Projects from "./components/Projects";
+import "./styles/App.css";
 
 function App() {
   return (
