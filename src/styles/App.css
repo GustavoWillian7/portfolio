@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap");
 
 html {
   scroll-behavior: smooth;
@@ -6,7 +6,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
   background: #333;
   color: white;
 }
@@ -20,4 +20,148 @@ main {
   padding: 20px;
   margin-top: 100px;
   margin-bottom: 50px;
+}
+
+/* ==================== RESPONSIVIDADE ==================== */
+
+/* Tablets (768px até ~1024px) */
+@media (max-width: 1024px) {
+  /* Header */
+  .navbar-center {
+    gap: 40px;
+  }
+
+  .navbar-center a {
+    font-size: 16px;
+  }
+
+  /* Hero */
+  .hero-container {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    min-height: auto;
+    padding: 40px 20px;
+  }
+
+  .left-section,
+  .right-section {
+    flex: unset;
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .greeting p {
+    font-size: 28px;
+  }
+
+  .greeting h1 {
+    font-size: 32px;
+  }
+
+  /* Projects */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 20px;
+  }
+
+  /* Tech Stack */
+  .tech-images {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 20px;
+    padding: 20px;
+  }
+
+  .tech-image {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+/* Celulares (até 767px) */
+@media (max-width: 767px) {
+  /* Header */
+  .header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .navbar-center {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .navbar-center a {
+    font-size: 14px;
+  }
+
+  /* Hero */
+  .hero-container {
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .left-section,
+  .right-section {
+    padding: 10px;
+  }
+
+  .profile-picture img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .greeting p {
+    font-size: 22px;
+  }
+
+  .greeting h1 {
+    font-size: 26px;
+  }
+
+  .right-section h2 {
+    font-size: 28px;
+  }
+
+  .right-section p {
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  /* Projects */
+  .projects h2 {
+    font-size: 32px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 15px;
+  }
+
+  .project-image {
+    height: 160px;
+  }
+
+  /* Tech Stack */
+  .tech-stack h2 {
+    font-size: 32px;
+  }
+
+  .tech-images {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 15px;
+  }
+
+  .tech-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .tech-name {
+    font-size: 14px;
+  }
 }

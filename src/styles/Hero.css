@@ -4,28 +4,28 @@
   min-height: 600px;
   padding: 0;
 
-  justify-content: center; /* Centraliza as seções no container */
-  gap: 300px; /* Espaçamento vazio entre left e right */
+  justify-content: center;
+  gap: 300px;
 }
 
 .left-section,
 .right-section {
-  flex: 0 0 500px; /* largura fixa (ajuste a gosto) */
+  flex: 0 0 500px;
   padding: 20px;
 
   display: flex;
   flex-direction: column;
-  align-items: center; /* centraliza conteúdo horizontalmente */
+  align-items: center;
 }
 
 .left-section {
-  margin: 0; /* remove margens fixas */
-  margin-top: 20px; /* pode manter */
+  margin: 0;
+  margin-top: 20px;
 }
 
 .right-section {
-  margin: 0; /* remove margens fixas */
-  margin-top: 40px; /* pode manter */
+  margin: 0;
+  margin-top: 40px;
   gap: 30px;
 }
 
@@ -69,7 +69,7 @@
     width: 0;
   }
   to {
-    width: 65%;
+    width: 100%;
   }
 }
 

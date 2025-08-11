@@ -8,7 +8,7 @@ export const useSmoothScroll = () => {
       const elementPosition = element.offsetTop;
       const offsetPosition = elementPosition - headerHeight + extraOffset;
 
-      // Função de easing para scroll mais suave
+      // Função de easing para scroll
       const easeInOutCubic = (t: number): number => {
         return t < 0.5
           ? 4 * t * t * t
