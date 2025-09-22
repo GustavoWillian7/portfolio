@@ -1,4 +1,6 @@
 import React from "react";
+import ThataCosmeticos from "../assets/thatacosmeticos.jpg";
+import ReactFlix from "../assets/reactflix.jpg";
 import RealTimeChat from "../assets/real-time-chat.jpg";
 import JapaneseDiscordBot from "../assets/japanese-discord-bot.jpg";
 import Toughts from "../assets/toughts.jpg";
@@ -14,6 +16,19 @@ interface Project {
 
 const Projects: React.FC = () => {
   const projects: Project[] = [
+    {
+      name: "Thata Cosméticos",
+      description: "Plataforma e-commerce para venda de produtos de beleza.",
+      image: ThataCosmeticos,
+      githubUrl: "https:www.thatacosmeticos.com",
+    },
+    {
+      name: "Reactflix",
+      description:
+        "Um catálogo de filmes feito com React, TypeScript e Tailwind CSS",
+      image: ReactFlix,
+      githubUrl: "https://github.com/GustavoWillian7/Reactflix",
+    },
     {
       name: "Real Time Chat",
       description:
