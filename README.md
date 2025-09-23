@@ -10,9 +10,7 @@
 <br>
 
 <div align="center">
-  <a href="https://portfolio-roan-omega-n3sv1b6jhn.vercel.app/">
     ![Portfolio](./src/assets/portfolio.jpg)
-  </a>
 </div>
 
 <p align="center">
@@ -60,7 +58,7 @@ Siga os passos abaixo para executar o projeto em seu ambiente local:
 
 ```bash
 # 1. Clone este repositório
-git clone [https://github.com/GustavoWillian7/portfolio](https://github.com/GustavoWillian7/portfolio)
+git clone https://github.com/GustavoWillian7/portfolio
 
 # 2. Navegue até o diretório do projeto
 cd portfolio
