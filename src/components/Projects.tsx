@@ -74,7 +74,7 @@ const Projects: React.FC = () => {
                       href={project.deployUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="project-link"
+                      className="project-link github"
                     >
                       Acesse
                     </a>
