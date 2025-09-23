@@ -16,7 +16,7 @@
 </div>
 
 <p align="center">
-  <a href="https://portfolio-roan-omega-n3sv1b6jhn.vercel.app/" target="_blank">
+  <a href="https://portfolio-roan-omega-n3sv1b6jhn.vercel.app/" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/Acessar%20Live%20Demo-33a8ff?style=for-the-badge" alt="Live Demo">
   </a>
 </p>
