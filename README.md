@@ -9,9 +9,7 @@
 
 <br>
 
-<div align="center">
     ![Portfolio](./src/assets/portfolio.jpg)
-</div>
 
 <p align="center">
   <a href="https://portfolio-roan-omega-n3sv1b6jhn.vercel.app/" target="_blank">
