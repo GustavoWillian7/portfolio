@@ -9,7 +9,11 @@
 
 <br>
 
-    ![Portfolio](./src/assets/portfolio.jpg)
+<div align="center">
+  <a href="https://portfolio-roan-omega-n3sv1b6jhn.vercel.app/" target="_blank">
+    <img src="https://raw.githubusercontent.com/GustavoWillian7/portfolio/main/src/assets/portfolio.jpg" alt="Demonstração do Portfólio" width="80%">
+  </a>
+</div>
 
 <p align="center">
   <a href="https://portfolio-roan-omega-n3sv1b6jhn.vercel.app/" target="_blank">
