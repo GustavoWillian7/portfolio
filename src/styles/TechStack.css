@@ -1,4 +1,6 @@
 .tech-stack {
+  position: relative;
+  z-index: 1;
   background: transparent;
   padding: 50px 20px;
   min-height: 625px;
@@ -9,24 +11,26 @@
 }
 
 .tech-stack h2 {
-  font-size: 50px;
-  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
   margin-bottom: 50px;
   margin-top: 100px;
-  color: white;
+  color: #f8fafc;
+  letter-spacing: -0.5px;
 }
 
 .tech-images {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 100px 60px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.06);
   padding: 40px;
   border-radius: 24px;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: transparent;
+  backdrop-filter: blur(40px) saturate(140%);
+  -webkit-backdrop-filter: blur(40px) saturate(140%);
   margin: 0 auto;
   width: 90%;
   max-width: 1200px;
@@ -34,10 +38,10 @@
 
 .tech-item {
   text-align: center;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: transparent;
+  backdrop-filter: blur(20px) saturate(120%);
+  -webkit-backdrop-filter: blur(20px) saturate(120%);
+  border: 1px solid rgba(168, 85, 247, 0.2);
   border-radius: 16px;
   padding: 20px 10px;
   transition: all 0.3s ease;
@@ -45,17 +49,17 @@
 
 .tech-item:hover {
   transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(168, 85, 247, 0.1);
+  box-shadow: 0 8px 32px rgba(168, 85, 247, 0.15);
+  border-color: rgba(168, 85, 247, 0.35);
 }
 
 .tech-name {
   margin-top: 10px;
-  font-size: 16px;
-  font-family: 'Source Code Pro', monospace;
-  color: white;
-  font-weight: bold;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  color: #e2e8f0;
 }
 
 .tech-image {

@@ -1,4 +1,6 @@
 .projects {
+  position: relative;
+  z-index: 1;
   background: transparent;
   padding: 50px 20px;
   min-height: 800px;
@@ -9,45 +11,47 @@
 }
 
 .projects h2 {
-  font-size: 50px;
-  font-family: 'Roboto', sans-serif;
+  font-size: 40px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
   margin-bottom: 50px;
   margin-top: 100px;
-  color: white;
+  color: #f8fafc;
+  letter-spacing: -0.5px;
 }
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 60px 80px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.06);
   padding: 40px;
   border-radius: 24px;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: transparent;
+  backdrop-filter: blur(40px) saturate(140%);
+  -webkit-backdrop-filter: blur(40px) saturate(140%);
   margin: 0 auto;
   width: 90%;
   max-width: 1200px;
 }
 
 .project-item {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: transparent;
+  backdrop-filter: blur(20px) saturate(120%);
+  -webkit-backdrop-filter: blur(20px) saturate(120%);
   border-radius: 20px;
   padding: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
 }
 
 .project-item:hover {
   transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(168, 85, 247, 0.1);
+  box-shadow: 0 8px 32px rgba(168, 85, 247, 0.15);
+  border-color: rgba(168, 85, 247, 0.3);
 }
 
 .project-image {
@@ -70,18 +74,20 @@
 }
 
 .project-info h3 {
-  font-size: 24px;
-  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
   margin-bottom: 10px;
-  color: white;
+  color: #f8fafc;
 }
 
 .project-info p {
-  font-size: 16px;
-  font-family: 'Source Code Pro', monospace;
-  line-height: 1.5;
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
   margin-bottom: 20px;
-  color: rgba(255, 255, 255, 0.8);
+  color: #94a3b8;
 }
 
 .project-links {
@@ -91,36 +97,37 @@
 }
 
 .project-link {
-  padding: 8px 16px;
+  padding: 10px 20px;
   border-radius: 12px;
   text-decoration: none;
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Inter", sans-serif;
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 600;
   transition: all 0.3s ease;
   backdrop-filter: blur(4px);
+  letter-spacing: 0.5px;
 }
 
 .project-link.github {
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  color: #f8fafc;
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .project-link.github:hover {
-  background: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
 }
 
 .project-link.live {
-  background: rgba(37, 211, 102, 0.2);
-  color: white;
-  border: 1px solid rgba(37, 211, 102, 0.3);
+  background: rgba(34, 211, 238, 0.1);
+  color: #f8fafc;
+  border: 1px solid rgba(34, 211, 238, 0.3);
 }
 
 .project-link.live:hover {
-  background: rgba(37, 211, 102, 0.35);
-  border-color: rgba(37, 211, 102, 0.6);
-  box-shadow: 0 0 15px rgba(37, 211, 102, 0.3);
+  background: rgba(34, 211, 238, 0.2);
+  border-color: rgba(34, 211, 238, 0.5);
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.2);
 }

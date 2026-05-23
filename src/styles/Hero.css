@@ -1,36 +1,49 @@
 .hero-container {
   display: flex;
   width: 100%;
-  min-height: 600px;
-  padding: 0;
+  padding: 40px 20px;
   justify-content: center;
-  gap: 300px;
+  gap: 80px;
+  align-items: flex-start;
 }
 
 .left-section,
 .right-section {
-  flex: 0 0 500px;
-  padding: 30px;
+  width: 440px;
+  height: 520px;
+  padding: 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: transparent;
+  backdrop-filter: blur(40px) saturate(140%);
+  -webkit-backdrop-filter: blur(40px) saturate(140%);
   border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 .left-section {
   margin: 0;
   margin-top: 20px;
+  justify-content: center;
+  gap: 20px;
 }
 
 .right-section {
   margin: 0;
-  margin-top: 40px;
-  gap: 30px;
+  margin-top: 20px;
+  justify-content: space-evenly;
+  position: relative;
+}
+
+.scroll-anchor {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
 }
 
 .profile-picture {
@@ -38,38 +51,41 @@
   justify-content: center;
   align-items: center;
   height: 250px;
-  margin-top: 60px;
 }
 
 .profile-picture img {
   border-radius: 50%;
   width: 250px;
   height: 250px;
-  border: 3px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(168, 85, 247, 0.3);
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.2), 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .greeting {
   text-align: center;
-  margin-top: 20px;
 }
 
 .greeting p {
-  font-size: 35px;
-  font-family: "Source Code Pro", monospace;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #94a3b8;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
 }
 
 .greeting h1 {
-  font-size: 40px;
-  font-family: "Source Code Pro", monospace;
+  font-size: 48px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 800;
   white-space: nowrap;
   display: inline-block;
   position: relative;
-  border-right: 2px solid white;
+  border-right: 2px solid #a855f7;
   animation: typing 2s steps(20, end), blink-caret 0.75s step-end infinite;
   overflow: hidden;
-  color: white;
+  color: #f8fafc;
+  letter-spacing: -0.5px;
 }
 
 @keyframes typing {
@@ -87,62 +103,57 @@
     border-color: transparent;
   }
   50% {
-    border-color: white;
+    border-color: #a855f7;
   }
-}
-
-#sobre {
-  padding-top: 80px;
-  margin-top: -80px;
-}
-
-#sobre p {
-  text-align: justify;
 }
 
 .right-section h2 {
   text-align: center;
-  font-size: 35px;
-  margin-bottom: 20px;
-  margin-top: -20px;
-  font-family: "Roboto", sans-serif;
-  color: white;
+  font-size: 28px;
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  color: #f8fafc;
 }
 
 .right-section p {
-  font-size: 17.5px;
-  line-height: 3.2;
-  font-family: "Source Code Pro", monospace;
-  color: rgba(255, 255, 255, 0.85);
+  font-size: 15px;
+  line-height: 1.8;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #cbd5e1;
+  margin: 0;
+  max-width: 360px;
+  text-align: justify;
 }
 
 .contact-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(37, 211, 102, 0.2);
-  padding: 12px 25px;
-  border-radius: 16px;
+  background: rgba(163, 230, 53, 0.1);
+  padding: 12px 28px;
+  border-radius: 14px;
   cursor: pointer;
-  width: 120px;
+  width: auto;
+  min-width: 140px;
   margin: 0 auto;
-  border: 1px solid rgba(37, 211, 102, 0.3);
-  box-shadow: 0 4px 30px rgba(37, 211, 102, 0.1);
+  border: 1px solid rgba(163, 230, 53, 0.3);
+  box-shadow: 0 4px 30px rgba(163, 230, 53, 0.1);
   transition: all 0.3s ease;
   text-decoration: none;
-  color: white;
-  font-family: "Source Code Pro", monospace;
+  color: #f8fafc;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.5px;
   backdrop-filter: blur(4px);
 }
 
 .contact-button img {
-  width: 30px;
-  height: 30px;
-  margin-right: 5px;
-}
-
-.contact-button span {
-  font-size: 16px;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
 }
 
 .contact-button:active {
@@ -151,8 +162,8 @@
 }
 
 .contact-button:hover {
-  background: rgba(37, 211, 102, 0.35);
+  background: rgba(163, 230, 53, 0.2);
   transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
-  border-color: rgba(37, 211, 102, 0.6);
+  box-shadow: 0 0 25px rgba(163, 230, 53, 0.3);
+  border-color: rgba(163, 230, 53, 0.5);
 }

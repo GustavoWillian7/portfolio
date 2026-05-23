@@ -16,15 +16,14 @@ const Hero: React.FC = () => {
         </div>
       </div>
       <div className="right-section">
-        <section id="sobre">
-          <h2>Sobre mim</h2>
-          <p>
-            Sou desenvolvedor backend de 24 anos, com foco em Node.js e seus
-            frameworks. Formado em Ciência da Computação no Instituto Federal Goiano
-            - Campus Morrinhos. Cultivo uma duradoura paixão e curiosidade pela
-            tecnologia desde criança.
-          </p>
-        </section>
+        <div id="sobre" className="scroll-anchor" />
+        <h2>Sobre mim</h2>
+        <p>
+          Sou desenvolvedor backend de 24 anos, com foco em Node.js e seus
+          frameworks. Formado em Ciência da Computação no Instituto Federal Goiano
+          - Campus Morrinhos. Cultivo uma duradoura paixão e curiosidade pela
+          tecnologia desde criança.
+        </p>
         <a
           href="https://wa.me/5564984344807"
           target="_blank"
