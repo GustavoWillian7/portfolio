@@ -19,8 +19,8 @@ const Hero: React.FC = () => {
         <section id="sobre">
           <h2>Sobre mim</h2>
           <p>
-            Sou desenvolvedor backend de 23 anos, com foco em Node.js e seus
-            frameworks. Estudo Ciência da Computação no Instituto Federal Goiano
+            Sou desenvolvedor backend de 24 anos, com foco em Node.js e seus
+            frameworks. Formado em Ciência da Computação no Instituto Federal Goiano
             - Campus Morrinhos. Cultivo uma duradoura paixão e curiosidade pela
             tecnologia desde criança.
           </p>

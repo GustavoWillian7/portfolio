@@ -3,7 +3,6 @@
   width: 100%;
   min-height: 600px;
   padding: 0;
-
   justify-content: center;
   gap: 300px;
 }
@@ -11,11 +10,16 @@
 .left-section,
 .right-section {
   flex: 0 0 500px;
-  padding: 20px;
-
+  padding: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .left-section {
@@ -41,6 +45,8 @@
   border-radius: 50%;
   width: 250px;
   height: 250px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .greeting {
@@ -51,6 +57,7 @@
 .greeting p {
   font-size: 35px;
   font-family: "Source Code Pro", monospace;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .greeting h1 {
@@ -62,6 +69,7 @@
   border-right: 2px solid white;
   animation: typing 2s steps(20, end), blink-caret 0.75s step-end infinite;
   overflow: hidden;
+  color: white;
 }
 
 @keyframes typing {
@@ -98,29 +106,33 @@
   margin-bottom: 20px;
   margin-top: -20px;
   font-family: "Roboto", sans-serif;
+  color: white;
 }
 
 .right-section p {
   font-size: 17.5px;
   line-height: 3.2;
   font-family: "Source Code Pro", monospace;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .contact-button {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #25d366;
+  background: rgba(37, 211, 102, 0.2);
   padding: 12px 25px;
-  border-radius: 5px;
+  border-radius: 16px;
   cursor: pointer;
   width: 120px;
   margin: 0 auto;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  transition: transform 0.1s, box-shadow 0.1s, background-color 0.3s;
+  border: 1px solid rgba(37, 211, 102, 0.3);
+  box-shadow: 0 4px 30px rgba(37, 211, 102, 0.1);
+  transition: all 0.3s ease;
   text-decoration: none;
   color: white;
   font-family: "Source Code Pro", monospace;
+  backdrop-filter: blur(4px);
 }
 
 .contact-button img {
@@ -139,7 +151,8 @@
 }
 
 .contact-button:hover {
-  background-color: #1e8e3e;
+  background: rgba(37, 211, 102, 0.35);
   transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 20px rgba(37, 211, 102, 0.4);
+  border-color: rgba(37, 211, 102, 0.6);
 }

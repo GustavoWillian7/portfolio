@@ -7,9 +7,13 @@
   justify-content: center;
   align-items: center;
   padding: 20px 30px;
-  background-color: #444;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 1000;
   min-height: 80px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-center {
@@ -22,10 +26,14 @@
   text-decoration: none;
   font-size: 18px;
   font-family: 'Roboto', sans-serif;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 12px;
 }
 
 .navbar-center a:hover {
-  text-decoration: underline;
+  text-decoration: none;
   color: #25d366;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(37, 211, 102, 0.3);
 }

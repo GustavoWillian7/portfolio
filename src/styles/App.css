@@ -7,7 +7,8 @@ html {
 body {
   margin: 0;
   font-family: "Source Code Pro", monospace;
-  background: #333;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  background-attachment: fixed;
   color: white;
 }
 
@@ -24,7 +25,7 @@ main {
 
 /* ==================== RESPONSIVIDADE ==================== */
 
-/* Tablets (768px até ~1024px) */
+/* Tablets (768px ate ~1024px) */
 @media (max-width: 1024px) {
   /* Header */
   .navbar-center {
@@ -79,7 +80,7 @@ main {
   }
 }
 
-/* Celulares (até 767px) */
+/* Celulares (ate 767px) */
 @media (max-width: 767px) {
   /* Header */
   .header {
