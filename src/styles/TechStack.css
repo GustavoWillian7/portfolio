@@ -11,26 +11,31 @@
 }
 
 .tech-stack h2 {
-  font-size: 40px;
-  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 28px;
+  font-family: "Space Mono", monospace;
   font-weight: 700;
   margin-bottom: 50px;
   margin-top: 100px;
-  color: #f8fafc;
-  letter-spacing: -0.5px;
+  color: #00ff41;
+  letter-spacing: 2px;
+  text-transform: lowercase;
+  text-shadow: 0 0 14px rgba(0, 255, 65, 0.4);
+}
+
+.tech-stack h2::before {
+  content: "// ";
+  color: #3a3a3a;
 }
 
 .tech-images {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 100px 60px;
-  border: 1px solid rgba(168, 85, 247, 0.3);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.06);
-  padding: 40px;
-  border-radius: 24px;
-  background: transparent;
-  backdrop-filter: blur(40px) saturate(140%);
-  -webkit-backdrop-filter: blur(40px) saturate(140%);
+  gap: 20px;
+  border: 1px solid rgba(0, 255, 65, 0.2);
+  box-shadow: 0 0 30px rgba(0, 255, 65, 0.04);
+  padding: 30px;
+  border-radius: 4px;
+  background: #0d0d0d;
   margin: 0 auto;
   width: 90%;
   max-width: 1200px;
@@ -38,35 +43,44 @@
 
 .tech-item {
   text-align: center;
-  background: transparent;
-  backdrop-filter: blur(20px) saturate(120%);
-  -webkit-backdrop-filter: blur(20px) saturate(120%);
-  border: 1px solid rgba(168, 85, 247, 0.2);
-  border-radius: 16px;
-  padding: 20px 10px;
-  transition: all 0.3s ease;
+  background: #0a0a0a;
+  border: 1px solid rgba(0, 255, 65, 0.12);
+  border-radius: 4px;
+  padding: 24px 12px;
+  transition: all 0.2s ease;
+  cursor: default;
 }
 
 .tech-item:hover {
-  transform: translateY(-5px);
-  background: rgba(168, 85, 247, 0.1);
-  box-shadow: 0 8px 32px rgba(168, 85, 247, 0.15);
-  border-color: rgba(168, 85, 247, 0.35);
+  border-color: rgba(0, 255, 65, 0.4);
+  box-shadow: 0 0 16px rgba(0, 255, 65, 0.1);
+  transform: translateY(-2px);
 }
 
 .tech-name {
-  margin-top: 10px;
-  font-size: 15px;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
-  color: #e2e8f0;
+  margin-top: 12px;
+  font-size: 11px;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  color: #4a4a4a;
+  letter-spacing: 1px;
+  text-transform: lowercase;
+  transition: color 0.2s ease;
+}
+
+.tech-item:hover .tech-name {
+  color: #00ff41;
 }
 
 .tech-image {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 10px;
-  border: none;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 4px;
+  filter: saturate(0.7) brightness(0.85);
+  transition: filter 0.2s ease;
+}
+
+.tech-item:hover .tech-image {
+  filter: saturate(1) brightness(1);
 }

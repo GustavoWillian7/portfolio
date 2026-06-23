@@ -33,7 +33,7 @@ const StarField: React.FC = () => {
     const initStars = () => {
       stars = [];
       const starCount = Math.floor((canvas.width * canvas.height) / 2500);
-      const colors = ["#ffffff", "#e0f2fe", "#f0e9ff", "#dbeafe", "#fef3c7"];
+      const colors = ["#00ff41", "#00d4ff", "#00ff41", "#39ff14", "#00ffaa"];
 
       for (let i = 0; i < starCount; i++) {
         stars.push({

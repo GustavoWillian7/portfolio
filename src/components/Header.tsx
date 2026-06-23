@@ -26,9 +26,10 @@ const Header: React.FC = () => {
 
   return (
     <header className="header">
+      <span className="header-logo">GW</span>
       <div className="navbar-center">
         <a href="#sobre" onClick={handleSobreMimClick}>
-          Sobre mim
+          sobre_mim
         </a>
         <a
           href="#stack"
@@ -37,7 +38,7 @@ const Header: React.FC = () => {
             scrollToSection("stack", 150);
           }}
         >
-          Tech Stack
+          tech_stack
         </a>
         <a
           href="#projetos"
@@ -46,7 +47,7 @@ const Header: React.FC = () => {
             scrollToSection("projetos", 150);
           }}
         >
-          Projetos
+          projetos
         </a>
       </div>
     </header>

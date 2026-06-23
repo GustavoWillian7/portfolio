@@ -4,12 +4,12 @@ import TechStack from "./components/TechStack";
 import Projects from "./components/Projects";
 import "./styles/App.css";
 
-import StarField from "./components/StarField";
+import MatrixRain from "./components/MatrixRain";
 
 function App() {
   return (
     <div className="App">
-      <StarField />
+      <MatrixRain />
       <Header />
       <main>
         <Hero />
