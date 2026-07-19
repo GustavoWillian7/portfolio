@@ -2,8 +2,13 @@ import React from 'react';
 import '../styles/Hero.css';
 import profilePicture from '../assets/pfp_linkedin.png';
 import whatsappIcon from '../assets/Whatsapp.png';
+import { useLanguage } from '../contexts/LanguageContext';
+
+const WHATSAPP_URL = 'https://wa.me/5564984344807';
 
 const Hero: React.FC = () => {
+  const { t, language } = useLanguage();
+
   return (
     <div className="hero-container">
       <div className="left-section">
@@ -15,11 +20,11 @@ const Hero: React.FC = () => {
         </div>
         <div className="terminal-body">
           <div className="profile-picture">
-            <img src={profilePicture} alt="Foto de perfil" />
+            <img src={profilePicture} alt={language === 'pt' ? 'Foto de perfil' : 'Profile picture'} />
           </div>
           <div className="greeting">
-            <p><span className="prompt">&gt;_</span> olá, eu sou</p>
-            <h1>Gustavo Willian</h1>
+            <p><span className="prompt">&gt;_</span> {t('hero.prefix')}</p>
+            <h1>Gustavo Willian{t('hero.titleSuffix')}</h1>
           </div>
         </div>
       </div>
@@ -33,21 +38,16 @@ const Hero: React.FC = () => {
           <span className="terminal-title">whoami.sh</span>
         </div>
         <div className="terminal-body">
-          <h2><span className="cmd-prefix">#</span> sobre_mim</h2>
-          <p>
-            Sou desenvolvedor backend de 24 anos, com foco em Node.js e seus
-            frameworks. Formado em Ciência da Computação no Instituto Federal Goiano
-            - Campus Morrinhos. Cultivo uma duradoura paixão e curiosidade pela
-            tecnologia desde criança.
-          </p>
+          <h2><span className="cmd-prefix">#</span> {t('hero.aboutTitle')}</h2>
+          <p>{t('hero.aboutText')}</p>
           <a
-            href="https://wa.me/5564984344807"
+            href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="contact-button"
           >
-            <img src={whatsappIcon} alt="Logo do WhatsApp" />
-            <span>&gt;_ contato</span>
+            <img src={whatsappIcon} alt="WhatsApp" />
+            <span>&gt;_ {t('hero.contact')}</span>
           </a>
         </div>
       </div>

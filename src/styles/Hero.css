@@ -48,7 +48,7 @@
 .terminal-title {
   font-family: "Space Mono", monospace;
   font-size: 11px;
-  color: #3e3e3e;
+  color: #9a9a9a;
   margin-left: 6px;
   letter-spacing: 1px;
 }
@@ -106,7 +106,7 @@
   font-size: 13px;
   font-family: "Space Mono", monospace;
   font-weight: 400;
-  color: #5a5a5a;
+  color: #9a9a9a;
   letter-spacing: 2px;
   margin-bottom: 10px;
   text-transform: lowercase;

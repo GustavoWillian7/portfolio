@@ -1,55 +1,39 @@
 import React from "react";
 import "../styles/Header.css";
 import { useSmoothScroll } from "../hooks/useSmoothScroll";
+import { useLanguage } from "../contexts/LanguageContext";
 
 const Header: React.FC = () => {
   const scrollToSection = useSmoothScroll();
+  const { language, toggleLanguage, t } = useLanguage();
 
-  const handleSobreMimClick = (e: React.MouseEvent) => {
+  const handleClick = (e: React.MouseEvent, sectionId: string) => {
     e.preventDefault();
-
-    const width = window.innerWidth;
-    let extraOffset = 0;
-
-    if (width === 375 && window.innerHeight === 667) {
-      extraOffset = -100;
-    } else if (width === 412 && window.innerHeight === 915) {
-      extraOffset = -375;
-    } else if (width === 768 && window.innerHeight === 1024) {
-      extraOffset = -150;
-    } else if (width === 912 && window.innerHeight === 1368) {
-      extraOffset = -475;
-    }
-
-    scrollToSection("sobre", extraOffset);
+    scrollToSection(sectionId);
   };
 
   return (
     <header className="header">
       <span className="header-logo">GW</span>
-      <div className="navbar-center">
-        <a href="#sobre" onClick={handleSobreMimClick}>
-          sobre_mim
+      <nav className="navbar-center" aria-label={language === "pt" ? "Navegação principal" : "Main navigation"}>
+        <a href="#sobre" onClick={(e) => handleClick(e, "sobre")}>
+          {t("header.about")}
         </a>
-        <a
-          href="#stack"
-          onClick={(e) => {
-            e.preventDefault();
-            scrollToSection("stack", 150);
-          }}
-        >
-          tech_stack
+        <a href="#stack" onClick={(e) => handleClick(e, "stack")}>
+          {t("header.stack")}
         </a>
-        <a
-          href="#projetos"
-          onClick={(e) => {
-            e.preventDefault();
-            scrollToSection("projetos", 150);
-          }}
-        >
-          projetos
+        <a href="#projetos" onClick={(e) => handleClick(e, "projetos")}>
+          {t("header.projects")}
         </a>
-      </div>
+      </nav>
+      <button
+        type="button"
+        className="language-toggle"
+        onClick={toggleLanguage}
+        aria-label={language === "pt" ? "Switch to English" : "Mudar para português"}
+      >
+        {language === "pt" ? "EN" : "PT"}
+      </button>
     </header>
   );
 };

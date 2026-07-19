@@ -1,40 +1,38 @@
 import { useCallback } from "react";
 
+const HEADER_HEIGHT = 100;
+const DURATION = 800;
+
+const easeInOutCubic = (t: number): number => {
+  return t < 0.5
+    ? 4 * t * t * t
+    : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+};
+
 export const useSmoothScroll = () => {
-  const scrollToSection = useCallback((sectionId: string, extraOffset = 0) => {
+  const scrollToSection = useCallback((sectionId: string) => {
     const element = document.getElementById(sectionId);
-    if (element) {
-      const headerHeight = 100;
-      const elementPosition = element.offsetTop;
-      const offsetPosition = elementPosition - headerHeight + extraOffset;
+    if (!element) return;
 
-      // Função de easing para scroll
-      const easeInOutCubic = (t: number): number => {
-        return t < 0.5
-          ? 4 * t * t * t
-          : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
-      };
+    const targetY = element.offsetTop - HEADER_HEIGHT;
+    const startY = window.scrollY;
+    const distance = targetY - startY;
+    let startTime: number | null = null;
 
-      const startPosition = window.pageYOffset;
-      const distance = offsetPosition - startPosition;
-      const duration = 800; // 800ms
-      let startTime: number | null = null;
+    const animate = (currentTime: number) => {
+      if (startTime === null) startTime = currentTime;
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / DURATION, 1);
+      const easedProgress = easeInOutCubic(progress);
 
-      const animation = (currentTime: number) => {
-        if (startTime === null) startTime = currentTime;
-        const timeElapsed = currentTime - startTime;
-        const progress = Math.min(timeElapsed / duration, 1);
-        const easedProgress = easeInOutCubic(progress);
+      window.scrollTo(0, startY + distance * easedProgress);
 
-        window.scrollTo(0, startPosition + distance * easedProgress);
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
 
-        if (progress < 1) {
-          requestAnimationFrame(animation);
-        }
-      };
-
-      requestAnimationFrame(animation);
-    }
+    requestAnimationFrame(animate);
   }, []);
 
   return scrollToSection;

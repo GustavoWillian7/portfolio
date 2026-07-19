@@ -3,90 +3,79 @@ import ThataCosmeticos from "../assets/thatacosmeticos.jpg";
 import ReactFlix from "../assets/reactflix.jpg";
 import RealTimeChat from "../assets/real-time-chat.jpg";
 import JapaneseDiscordBot from "../assets/japanese-discord-bot.jpg";
-import Toughts from "../assets/toughts.jpg";
-import RandomPasswordGenerator from "../assets/random-password-generator.jpg";
 import "../styles/Projects.css";
+import { useLanguage } from "../contexts/LanguageContext";
 
 interface Project {
+  key: string;
   name: string;
-  description: string;
   image: string;
   githubUrl?: string;
   deployUrl?: string;
 }
 
 const Projects: React.FC = () => {
+  const { t } = useLanguage();
+
   const projects: Project[] = [
     {
+      key: "thata",
       name: "Thata Cosméticos",
-      description: "Plataforma e-commerce para venda de produtos de beleza.",
       image: ThataCosmeticos,
-      deployUrl: "https://www.thatacosmeticos.com", 
+      deployUrl: "https://www.thatacosmeticos.com",
     },
     {
-      name: "Reactflix",
-      description: "Um catálogo de filmes feito com React, TypeScript e Tailwind CSS.",
-      image: ReactFlix,
-      githubUrl: "https://github.com/GustavoWillian7/Reactflix",
-    },
-    {
-      name: "Real Time Chat",
-      description: "Bate papo em tempo real usando Node, Express, Socket.io e MongoDB.",
-      image: RealTimeChat,
-      githubUrl: "https://github.com/GustavoWillian7/RealTimeChat",
-    },
-    {
+      key: "bot",
       name: "Japanese Discord Bot",
-      description: "Chatbot feito para o aplicativo Discord utilizando Node, com foco em conhecimentos sobre a língua japonesa.",
       image: JapaneseDiscordBot,
       githubUrl: "https://github.com/GustavoWillian7/JapaneseDiscordBot",
     },
     {
-      name: "Toughts",
-      description: "Aplicação web para compartilhamento de pensamentos.",
-      image: Toughts,
-      githubUrl: "https://github.com/GustavoWillian7/Toughts",
+      key: "chat",
+      name: "Real Time Chat",
+      image: RealTimeChat,
+      githubUrl: "https://github.com/GustavoWillian7/RealTimeChat",
     },
     {
-      name: "Gerador de senha aleatória",
-      description: "Gerador de senhas aleatórias com base nas preferências do usuário.",
-      image: RandomPasswordGenerator,
-      githubUrl: "https://github.com/GustavoWillian7/RandomPasswordGenerator",
+      key: "reactflix",
+      name: "Reactflix",
+      image: ReactFlix,
+      githubUrl: "https://github.com/GustavoWillian7/Reactflix",
     },
   ];
 
   return (
     <section id="projetos" className="projects">
       <div className="projects-content">
-        <h2>Projetos</h2>
+        <h2>{t("projects.title")}</h2>
         <div className="projects-grid">
-          {projects.map((project, index) => (
-            <div key={index} className="project-item">
+          {projects.map((project) => (
+            <div key={project.name} className="project-item">
               <div className="project-image">
                 <img src={project.image} alt={project.name} />
               </div>
               <div className="project-info">
                 <h3>{project.name}</h3>
-                <p>{project.description}</p>
+                <p>{t(`projects.${project.key}.description`)}</p>
                 <div className="project-links">
                   {project.deployUrl && (
                     <a
                       href={project.deployUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="project-link github"
+                      className="project-link live"
                     >
-                      Acesse
+                      {t("projects.link.live")}
                     </a>
                   )}
                   {project.githubUrl && (
-                     <a
+                    <a
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="project-link github"
                     >
-                      GitHub
+                      {t("projects.link.github")}
                     </a>
                   )}
                 </div>

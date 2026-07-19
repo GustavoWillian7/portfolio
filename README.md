@@ -3,9 +3,8 @@
 [![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![CSS Modules](https://img.shields.io/badge/CSS_Modules-000000?style=for-the-badge&logo=css-modules&logoColor=white)](https://github.com/css-modules/css-modules)
 
-> Repositório do meu portfólio pessoal, desenvolvido para exibir minhas habilidades e projetos.
+> Repositório do meu portfólio pessoal, desenvolvido para apresentar minha trajetória, stack e projetos como desenvolvedor backend com foco em Node.js.
 
 <br>
 
@@ -32,27 +31,32 @@
 
 ## 🎯 Sobre o Projeto
 
-Este é o repositório do meu portfólio pessoal, um lugar central para apresentar minha jornada como desenvolvedor, as tecnologias que domino e os projetos dos quais me orgulho. Foi construído com foco em um design limpo, responsivo e com interações suaves para proporcionar uma ótima experiência ao visitante.
+Este é o repositório do meu portfólio pessoal, um lugar central para apresentar minha jornada como desenvolvedor, as tecnologias que utilizo e os projetos dos quais me orgulho. O site foi construído com React, TypeScript e Vite, utilizando uma estética terminal/hacker para reforçar a identidade visual.
+
+O objetivo principal é posicionar minha atuação como **desenvolvedor backend**, com ênfase em **Node.js**, APIs REST e bancos de dados, enquanto mantenho uma apresentação profissional e responsiva.
 
 ## ✨ Funcionalidades
 
 - ✅ **Header Fixo:** Navegação intuitiva que acompanha o scroll do usuário.
-- ✅ **Seção Hero:** Apresentação com uma saudação animada (efeito de digitação) e um resumo sobre mim.
-- ✅ **Tech Stack:** Uma grade responsiva e visual com os ícones das tecnologias que utilizo.
-- ✅ **Projetos:** Cards detalhados para cada projeto, com links diretos para o código-fonte no GitHub e a demonstração ao vivo.
+- ✅ **Seção Hero:** Apresentação com saudação animada e resumo sobre mim.
+- ✅ **Tech Stack:** Grade responsiva com as tecnologias que utilizo no dia a dia (JavaScript, TypeScript, Node.js, Express, MongoDB, MySQL, Docker, Jest).
+- ✅ **Projetos:** Cards destacando projetos reais, com links para código-fonte e demonstrações ao vivo.
+- ✅ **Footer de Contato:** Links diretos para GitHub, LinkedIn e e-mail.
+- ✅ **Idioma PT/EN:** Toggle para alternar o portfólio entre português e inglês.
 - ✅ **Animações Sutis:** Transições suaves e efeitos que melhoram a experiência de navegação.
-- ✅ **Design Responsivo:** Totalmente adaptado para visualização em desktops, tablets e smartphones.
+- ✅ **Design Responsivo:** Totalmente adaptado para desktops, tablets e smartphones.
+- ✅ **SEO Básico:** Meta description, Open Graph e Twitter Cards configurados.
 
 ## 🛠️ Tecnologias Utilizadas
 
-As seguintes ferramentas e tecnologias foram usadas na construção do projeto:
+As seguintes ferramentas e tecnologias foram usadas na construção do site:
 
-| Ferramenta      | Descrição                                             |
-| --------------- | ----------------------------------------------------- |
-| **React**       | Biblioteca para construir a interface de usuário.     |
-| **TypeScript**  | Superset do JavaScript que adiciona tipagem estática. |
-| **Vite**        | Ferramenta de build moderna e extremamente rápida.    |
-| **CSS Modules** | Para estilização modular e escopada por componente.   |
+| Ferramenta     | Descrição                                           |
+| -------------- | --------------------------------------------------- |
+| **React**      | Biblioteca para construir a interface de usuário.   |
+| **TypeScript** | Superset do JavaScript que adiciona tipagem estática. |
+| **Vite**       | Ferramenta de build moderna e extremamente rápida. |
+| **CSS3**       | Estilização global e responsiva com CSS puro.       |
 
 ## 🚀 Como Rodar o Projeto
 
@@ -77,3 +81,36 @@ yarn dev
 
 # O servidor de desenvolvimento iniciará em http://localhost:5173 (ou outra porta disponível)
 ```
+
+## 📁 Estrutura do Projeto
+
+```
+portfolio/
+├── public/                 # Arquivos estáticos (favicon, CV, etc.)
+├── src/
+│   ├── assets/             # Imagens e ícones
+│   ├── components/         # Componentes React
+│   ├── hooks/              # Hooks customizados
+│   ├── styles/             # Arquivos CSS
+│   ├── types/              # Declarações de tipos
+│   ├── App.tsx             # Componente principal
+│   └── main.tsx            # Ponto de entrada do React
+├── index.html              # HTML principal com metatags
+├── package.json
+├── tsconfig.json
+└── README.md
+```
+
+## 📬 Contato
+
+Fique à vontade para entrar em contato ou acompanhar meu trabalho:
+
+- 💼 [LinkedIn](https://www.linkedin.com/in/gustavowillian7)
+- 🐙 [GitHub](https://github.com/GustavoWillian7)
+- 📧 [E-mail](mailto:gustavowillian0777@gmail.com)
+
+---
+
+<p align="center">
+  Desenvolvido com 💚 por Gustavo Willian
+</p>

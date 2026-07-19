@@ -41,6 +41,18 @@
   max-width: 1200px;
 }
 
+@media (max-width: 1024px) {
+  .tech-images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-images {
+    grid-template-columns: 1fr;
+  }
+}
+
 .tech-item {
   text-align: center;
   background: #0a0a0a;
@@ -62,7 +74,7 @@
   font-size: 11px;
   font-family: "Space Mono", monospace;
   font-weight: 700;
-  color: #4a4a4a;
+  color: #9a9a9a;
   letter-spacing: 1px;
   text-transform: lowercase;
   transition: color 0.2s ease;
@@ -77,10 +89,22 @@
   height: 80px;
   object-fit: contain;
   border-radius: 4px;
-  filter: saturate(0.7) brightness(0.85);
+  filter: saturate(0.8) brightness(0.95);
   transition: filter 0.2s ease;
 }
 
+.tech-image-dark {
+  filter: saturate(0.8) brightness(0.95) drop-shadow(0 0 4px rgba(255, 255, 255, 0.25));
+  background: rgba(255, 255, 255, 0.06);
+  padding: 6px;
+  box-sizing: border-box;
+}
+
 .tech-item:hover .tech-image {
-  filter: saturate(1) brightness(1);
+  filter: saturate(1) brightness(1.05);
+}
+
+.tech-item:hover .tech-image-dark {
+  filter: saturate(1) brightness(1.05) drop-shadow(0 0 6px rgba(255, 255, 255, 0.35));
+  background: rgba(255, 255, 255, 0.1);
 }

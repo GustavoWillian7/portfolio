@@ -33,7 +33,7 @@
 }
 
 .navbar-center a {
-  color: #5a5a5a;
+  color: #b0b0b0;
   text-decoration: none;
   font-size: 13px;
   font-family: "Space Mono", monospace;
@@ -55,4 +55,34 @@
   border-color: rgba(0, 255, 65, 0.45);
   box-shadow: 0 0 14px rgba(0, 255, 65, 0.18), inset 0 0 10px rgba(0, 255, 65, 0.04);
   text-decoration: none;
+}
+
+.language-toggle {
+  position: absolute;
+  right: 40px;
+  background: transparent;
+  border: 1px solid rgba(0, 255, 65, 0.35);
+  color: #5a5a5a;
+  font-family: "Space Mono", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+}
+
+.language-toggle:hover {
+  color: #00ff41;
+  border-color: rgba(0, 255, 65, 0.6);
+  box-shadow: 0 0 12px rgba(0, 255, 65, 0.15);
+}
+
+@media (max-width: 767px) {
+  .language-toggle {
+    position: static;
+    margin-top: 4px;
+  }
 }
