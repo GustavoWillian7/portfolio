@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Header.css";
 import { useSmoothScroll } from "../hooks/useSmoothScroll";
-import { useLanguage } from "../contexts/LanguageContext";
+import { useLanguage } from "../hooks/useLanguage";
 
 const Header: React.FC = () => {
   const scrollToSection = useSmoothScroll();
@@ -19,10 +19,10 @@ const Header: React.FC = () => {
         <a href="#sobre" onClick={(e) => handleClick(e, "sobre")}>
           {t("header.about")}
         </a>
-        <a href="#stack" onClick={(e) => handleClick(e, "stack")}>
+        <a href="#stack-title" onClick={(e) => handleClick(e, "stack-title")}>
           {t("header.stack")}
         </a>
-        <a href="#projetos" onClick={(e) => handleClick(e, "projetos")}>
+        <a href="#projetos-title" onClick={(e) => handleClick(e, "projetos-title")}>
           {t("header.projects")}
         </a>
       </nav>

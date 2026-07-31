@@ -49,12 +49,36 @@
   transition: all 0.2s ease;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 .project-item:hover {
   border-color: rgba(0, 255, 65, 0.45);
   box-shadow: 0 0 20px rgba(0, 255, 65, 0.1);
   transform: translateY(-3px);
+}
+
+.project-item-featured {
+  border-color: rgba(0, 255, 65, 0.35);
+  box-shadow: 0 0 24px rgba(0, 255, 65, 0.08);
+}
+
+.project-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  background: rgba(0, 255, 65, 0.12);
+  border: 1px solid rgba(0, 255, 65, 0.5);
+  color: #00ff41;
+  font-family: "Space Mono", monospace;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: lowercase;
+  padding: 4px 8px;
+  border-radius: 2px;
+  text-shadow: 0 0 6px rgba(0, 255, 65, 0.4);
 }
 
 /* Mini terminal bar per project card */

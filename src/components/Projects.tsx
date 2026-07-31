@@ -1,10 +1,11 @@
 import React from "react";
-import ThataCosmeticos from "../assets/thatacosmeticos.jpg";
-import ReactFlix from "../assets/reactflix.jpg";
+import SistemacWeb from "../assets/sistemac-web.webp";
+import PastelariaGames from "../assets/pastelaria-games.webp";
+import ReactFlix from "../assets/reactflix.webp";
 import RealTimeChat from "../assets/real-time-chat.jpg";
 import JapaneseDiscordBot from "../assets/japanese-discord-bot.jpg";
 import "../styles/Projects.css";
-import { useLanguage } from "../contexts/LanguageContext";
+import { useLanguage } from "../hooks/useLanguage";
 
 interface Project {
   key: string;
@@ -12,6 +13,7 @@ interface Project {
   image: string;
   githubUrl?: string;
   deployUrl?: string;
+  featured?: boolean;
 }
 
 const Projects: React.FC = () => {
@@ -19,10 +21,11 @@ const Projects: React.FC = () => {
 
   const projects: Project[] = [
     {
-      key: "thata",
-      name: "Thata Cosméticos",
-      image: ThataCosmeticos,
-      deployUrl: "https://www.thatacosmeticos.com",
+      key: "sistemac",
+      name: "SistemacWeb",
+      image: SistemacWeb,
+      featured: true,
+      deployUrl: "https://www.sistemacsistemas.com.br/",
     },
     {
       key: "bot",
@@ -37,6 +40,12 @@ const Projects: React.FC = () => {
       githubUrl: "https://github.com/GustavoWillian7/RealTimeChat",
     },
     {
+      key: "pastelaria",
+      name: "PastelariaGames",
+      image: PastelariaGames,
+      githubUrl: "https://github.com/GustavoWillian7/partygames",
+    },
+    {
       key: "reactflix",
       name: "Reactflix",
       image: ReactFlix,
@@ -47,10 +56,16 @@ const Projects: React.FC = () => {
   return (
     <section id="projetos" className="projects">
       <div className="projects-content">
-        <h2>{t("projects.title")}</h2>
+        <h2 id="projetos-title">{t("projects.title")}</h2>
         <div className="projects-grid">
           {projects.map((project) => (
-            <div key={project.name} className="project-item">
+            <div
+              key={project.name}
+              className={`project-item ${project.featured ? "project-item-featured" : ""}`}
+            >
+              {project.featured && (
+                <span className="project-badge">{t("projects.badge.production")}</span>
+              )}
               <div className="project-image">
                 <img src={project.image} alt={project.name} />
               </div>

@@ -205,3 +205,35 @@
 .contact-button:active {
   transform: scale(0.97);
 }
+
+.hero-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.hero-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: #5a5a5a;
+  border: 1px solid rgba(0, 255, 65, 0.25);
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+.hero-social-link svg {
+  width: 18px;
+  height: 18px;
+}
+
+.hero-social-link:hover {
+  color: #00ff41;
+  border-color: rgba(0, 255, 65, 0.5);
+  box-shadow: 0 0 14px rgba(0, 255, 65, 0.12);
+  transform: translateY(-2px);
+}
